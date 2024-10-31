@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wozyk test</title>
+    <link rel="shortcut icon" href="src/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/scss/main.scss">
+</head>
+<body>
+<div class="container">
+    <div class="card ">
+        <span class="card__title">
+          1. Пасажири
+        </span>
+        <div class="passenger">
+            <div class="passenger__heading">
+                <div class="passenger__name">Імʼя Прізвище</div>
+                <div class="passenger__city">Квиток туди</div>
+                <div class="passenger__actions">
+                    <button class="delete">
+                        <svg>
+                            <use href="src/assets/svg/sprite.svg#icon-trash"></use>
+                        </svg>
+                    </button>
+                    <button class="open-details">
+                        <svg>
+                            <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <form action="#" method="post" class="passenger__body passenger-form">
+                <div class="passenger__body-title">
+                    <div class="flex">
+                        <svg class="icon">
+                            <use href="src/assets/svg/sprite.svg#icon-user" style="fill: #fff"></use>
+                        </svg>
+                        <span class="passenger__body-title-text">Дані</span>
+                    </div>
+                    <button class="passenger__body-title-show-more" type="button">
+                        <svg>
+                            <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                        </svg>
+                    </button>
+                </div>
+                <p class="message">
+                    Зазначені дані необхідні для здійснення бронювання і будуть перевірені під час посадки в автобус.
+                </p>
+
+                <div  class="passenger__inputs-grid">
+                    <div class="input-field required">
+                        <label for="" class="input-field__label ">Тип квитка</label>
+                        <div class="input-field__input ticket-type" >
+                            <span class="ticket-type__label">Виберіть тип квитка</span>
+                            <svg class="dropdown-ticket-type-stroke">
+                                <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                            </svg>
+                        </div>
+                        <ul class="dropdown-list">
+
+                        </ul>
+
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label for="promocode" class="input-field__label">Промокод</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field__input" id="promocode" name="promocode"
+                                   placeholder="Наприклад Wozyk">
+                            <button class="button" type="button" id="promocode-button">Застосувати</button>
+                        </div>
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                        <div class="input-field__warning">
+                            <span class="input-field__warning-badge">!</span>
+                            <span class="input-field__warning-message"></span>
+                        </div>
+                    </div>
+                    <div class="input-field required">
+                        <label for="firstname" class="input-field__label">Імʼя</label>
+                        <input type="text" class="input-field__input " id="firstname" name="firstname"
+                               placeholder="Імʼя">
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                    </div>
+                    <div class="input-field required">
+                        <label for="lastname" class="input-field__label">Прізвище</label>
+                        <input type="text" class="input-field__input" id="lastname" name="lastname"
+                               placeholder="Прізвище">
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-field required">
+                        <label for="middlename" class="input-field__label">По батькові</label>
+                        <input type="text" class="input-field__input" id="middlename" name="middlename"
+                               placeholder="По батькові">
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                    </div>
+                    <div class="input-field required">
+                        <label for="phone" class="input-field__label">Телефон</label>
+                        <input type="text" class="input-field__input" id="phone" name="phone" placeholder="99 123 45 67" style="padding-left: 7rem">
+                        <div class="countries-wrapper">
+                            <div class="current-country">
+                                <img src="src/assets/img/flags/ua.png" class="flag" alt="">
+                                <span class="country-code">+380</span>
+                                    <svg class="country-stroke">
+                                        <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                                    </svg>
+                            </div>
+
+                            <div class="countries">
+
+                                <input type="text" id="countrycode" name="countrycode" class="input-field__input"
+                                          placeholder="Введіть код країни">
+                                <ul class="country-list">
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div class="input-field__error">
+                            <span class="input-field__error-badge">!</span>
+                            <span class="input-field__error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <button class="next-button">
+                        <span class="next-button__text">Далі</span>
+                        <div class="button circle">
+                            <svg>
+                                <use href="src/assets/svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="filled-passenger hidden">
+            <div class="filled-passenger__left">
+                <span class="filled-passenger__name">Марина Добрик</span>
+                <span class="filled-passenger__type">Дитина</span>
+                <p class="filled-passenger__additional-info">
+                    Місце 25, 26, подорож без сусіда, дод.багаж: <span>20 кг / 50х80х30 см</span>, зворотний квиток
+                </p>
+            </div>
+            <div class="passenger__actions">
+                <button class="delete">
+                    <svg>
+                        <use href="src/assets/svg/sprite.svg#icon-trash"></use>
+                    </svg>
+                </button>
+                <button class="open-details">
+                    <svg>
+                        <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="card result-booking">
+            <div class="result-booking__heading">
+                <span class="card__title small"> Ваше бронювання</span>
+                <div class="result-booking__timer timer">
+                    <svg class="timer__icon">
+                        <use href="src/assets/svg/sprite.svg#clock"></use>
+                    </svg>
+                    <div class="timer__time">
+                        <span class="timer__minutes timer__text minutes">20</span>:<span class="timer__seconds timer__text seconds">00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer__line">
+                <div class="timer__time-left-line"></div>
+            </div>
+
+            <div class="result-booking__cities">
+                <div class="result-booking__cities-item-wrapper">
+                    <div class="result-booking__cities-item">
+                        <span class="result-booking__cities-primary">04:15</span>
+                        <span class="result-booking__cities-secondary">19.07</span>
+                    </div>
+                    <div class="result-booking__cities-item">
+                        <span class="result-booking__cities-primary">Київ</span>
+                        <span class="result-booking__cities-secondary">АС (центральний Зал. вокзал), метро Вокзальна; вул. Симона Петлюри; буд. 32</span>
+                    </div>
+
+                    <div class="result-booking__cities-line">
+                        <div class="bordered circle"></div>
+                        <div class="line"></div>
+                        <div class="filled circle"></div>
+                    </div>
+                </div>
+                <div class="result-booking__cities-item-wrapper">
+                    <div class="result-booking__cities-item">
+                        <span class="result-booking__cities-primary">19:00</span>
+                        <span class="result-booking__cities-secondary">19.07</span>
+                    </div>
+                    <div class="result-booking__cities-item">
+                        <span class="result-booking__cities-primary">Варшава</span>
+                        <span class="result-booking__cities-secondary">Автовокзал "Заходня", Єрусалимські алеї; буд. 144</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="result-booking__passengers-list">
+                <li class="result-booking__passenger passenger-info">
+                    <div class="passenger-info__heading">
+                        <div class="passenger-info__heading-left">
+                            <svg class="passenger-info__edit-icon">
+                                <use href="src/assets/svg/sprite.svg#edit"></use>
+                            </svg>
+                            <span class="passenger-info__name">Імʼя Прізвище</span>
+                            <span class="passenger-info__slash">&nbsp;/&nbsp;</span>
+                            <span class="passenger-info__price">1450 грн</span>
+                        </div>
+                        <div class="passenger-info__heading-right">
+                            <svg class="passenger-info__stroke">
+                                <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="passenger-info__body">
+                        <div class="passenger-info__type">
+                            <span class="passenger-info__type-label">Дорослий</span>
+                            <span class="passenger-info__type-price">1450</span>
+                        </div>
+                        <div class="passenger-info__summary">
+                            <span class="passenger-info__summary-label">Загальна сума</span>
+                            <span class="passenger-info__summary-price">1450 грн</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="result-booking__passenger passenger-info">
+                    <div class="passenger-info__heading">
+                        <div class="passenger-info__heading-left">
+                            <svg class="passenger-info__edit-icon">
+                                <use href="src/assets/svg/sprite.svg#edit"></use>
+                            </svg>
+                            <span class="passenger-info__name">Марина Добрик</span>
+                            <span class="passenger-info__slash">&nbsp;/&nbsp;</span>
+                            <span class="passenger-info__price">2000 грн</span>
+                        </div>
+                        <div class="passenger-info__heading-right">
+                            <svg class="passenger-info__stroke">
+                                <use href="src/assets/svg/sprite.svg#icon-stroke"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="passenger-info__body">
+                        <div class="passenger-info__type">
+                            <span class="passenger-info__type-label">Дорослий</span>
+                            <span class="passenger-info__type-price">2000</span>
+                        </div>
+                        <div class="passenger-info__summary">
+                            <span class="passenger-info__summary-label">Загальна сума</span>
+                            <span class="passenger-info__summary-price">2000 грн</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="result-booking__summary">
+                <div class="result-booking__summary-text">
+                    <span class="card__title small">До сплати</span>
+                    <span class="result-booking__summary-addition">(вкл. ПДВ)</span>
+                </div>
+                <span class="card__title small">1 450 грн</span>
+            </div>
+        </div>
+        <button class="button" style="width: 100%">Сплатити</button>
+    </div>
+</div>
+
+<script defer type="module" src="src/js/script.js"></script>
+</body>
+</html>

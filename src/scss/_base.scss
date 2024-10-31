@@ -1,0 +1,69 @@
+$color-bg: #d6e4dd;
+$color-card: #f3faf5;
+$color-card-light: #fdfffa;
+
+$color-gray-dark: #1a1e21;
+$color-gray: #888d92;
+$color-gray-light: #979b9f;
+
+$color-gray-addition: #40454A;
+
+$color-line: #CCD2D5;
+
+$color-dark-green: #0E423E;
+$color-green: #56817d;
+$color-light-green: #d6e4dd;
+
+$color-button-default: #d7f526;
+$color-button-hover: #e7fe54;
+$color-button-active: #cfe934;
+$color-button-disabled: #eef8b5;
+
+$color-error: #ff523f;
+$color-warning: #f9d20e;
+
+$container: 84rem;
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-mariupol: 'Mariupol', sans-serif;
+
+body {
+  background-color: $color-bg;
+  font-family: $font-mariupol;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.container {
+  width: $container;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 421px;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 1154px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 2rem 0.5rem;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
