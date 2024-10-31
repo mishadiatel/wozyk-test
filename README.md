@@ -20,7 +20,7 @@ This project includes a responsive web page built according to a provided layout
 ### Functional
 - **Dropdowns**: Fully functional dropdowns with animated transitions and accessible keyboard navigation.<br>
 ![Screenshot](src/assets/img/readme-screenshots/ticket-type-dropdown.png)
-- **Quick Search in Dropdown**: The country code dropdown includes a quick search feature, allowing users to search and filter country codes efficiently.
+- **Quick Search in Dropdown**: The country code dropdown includes a quick search feature, allowing users to search and filter country codes efficiently. <br>
 ![Screenshot](src/assets/img/readme-screenshots/country-dropdown.png)<br>
 ![Screenshot](src/assets/img/readme-screenshots/country-dropdown-2.png)
 - **Simple validation**: Data validation during the form submission was implemented
